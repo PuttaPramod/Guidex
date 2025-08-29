@@ -1,0 +1,54 @@
+<!-- HERO SECTION -->
+ <div class="main">
+<div class="hero-section position-relative text-center d-flex flex-column align-items-center justify-content-center mb-5">
+  <img src="assets/banner.jpg" class="hero-banner-img fade-bottom" alt="Banner">
+  <div class="hero-title-overlay">
+    <h1 class="display-5 fw-bold mb-3 hero-main-title">Guidex</h1>
+    <p class="lead hero-main-lead">
+      Discover your best path after 10th! Explore streams, take our smart quiz, and get inspired for your future.
+    </p>
+    <div class="d-flex justify-content-center gap-4 mt-4 butt">
+  <a routerLink="/quiz" 
+     class="btn btn-warning btn-lg fw-semibold shadow custom-btn">
+     🎯 Take the Quiz
+  </a><div style="width: 100px;"></div>
+  
+  <a routerLink="/streams" 
+     class="btn btn-outline-danger btn-lg fw-semibold custom-btn">
+     📚 Explore Streams
+  </a>
+</div>
+
+  </div>
+</div>
+
+<!-- GUIDELINES SECTION -->
+<div class=" gui container my-5 py-3">
+  <h2 class="text-center text-primary fw-bold mb-4">Basic Guidelines for 10th Class Students</h2>
+  <div class="row g-4 justify-content-center">
+    <div *ngFor="let g of guidelines" class="col-sm-10 col-md-6 col-lg-4">
+      <div class="card h-100 shadow guideline-card border-0">
+        <div class="card-body p-4">
+          <h5 class="card-title text-info mb-2">
+            <i class="bi bi-lightbulb me-2"></i>{{g.title}}
+          </h5>
+          <p class="card-text">{{g.detail}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT/LOGO MINI CARD -->
+<div class="about-mini-card container d-flex justify-content-center my-5">
+  <div class="card shadow rounded-4 p-4 d-flex flex-row align-items-center" style="max-width:520px;">
+    <img src="assets/banner.jpg" alt="Guide" class="rounded-circle me-4" style="width:68px; height:68px; object-fit:cover;">
+    <div>
+      <h4 class="mb-1 text-primary fw-bold">Why FutureGuides?</h4>
+      <small class="text-muted">
+        Personalized guidance, modern resources, and all options in one place—made just for today's students!
+      </small>
+    </div>
+  </div>
+</div>
+</div>

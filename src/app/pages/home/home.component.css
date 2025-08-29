@@ -1,0 +1,108 @@
+/* HERO SECTION STYLES */
+.hero-section {
+  background: linear-gradient(120deg, #e0efff 0%, #f8faff 100%);
+  overflow: hidden;
+  top: 0;
+  position: relative;
+}
+.hero-banner-img {
+  
+  width: 100%;
+  height: 800px;
+  object-fit: cover bottom;
+   mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+  /* Optional: smooth top corners */
+  border-radius: 18px 18px 0 0;
+  filter: brightness(0.97);
+}
+.hero-title-overlay {
+  position: absolute;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
+  max-width: 680px;
+  text-align: center;
+  z-index: 2;
+}
+.hero-main-title {
+  text-shadow: 0 2px 16px #13579888, 0 0 8px #22336622;
+  color:white;
+  font-size:60px;
+}
+.hero-main-lead {
+  font-size: 1.8rem;
+  font-weight:bolder;
+  text-shadow: 0 2px 14px #222c28aa;
+  color: #e50c0c;
+  font-weight: 700;
+}
+/* BUTTONS */
+.custom-btn {
+  width: 220px;
+  height: 50px;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.butt{
+  align-items: center;
+}
+.btn-outline-danger{
+  color: black;
+}
+
+/* Custom hover effects */
+.btn-warning.custom-btn:hover {
+  background-color: #9cff39b8;
+  border-color: #9cff39b8;
+  box-shadow: 0px 6px 15px rgba(255, 193, 7, 0.5);
+}
+
+.btn-outline-danger.custom-btn:hover {
+  background-color: #dc3545;
+  color: white;
+  box-shadow: 0px 6px 15px rgba(220, 53, 69, 0.5);
+}
+
+/* Responsive buttons */
+@media (max-width: 768px) {
+  .butt {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .custom-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+
+/* GUIDELINES CARDS */
+.guideline-card {
+  border-radius: 1.5rem;
+  background: #e8f1fe;
+  transition: transform 0.18s, box-shadow 0.18s;
+}
+.guideline-card:hover {
+  transform: scale(1.04) translateY(-7px);
+  box-shadow: 0 8px 32px rgba(100, 150, 200, 0.13);
+}
+
+/* ABOUT MINI CARD */
+.about-mini-card .card {
+  background: #fffbe7;
+  border-radius: 2rem;
+  border: none;
+  box-shadow: 0 3px 12px rgba(234,203,90,0.13);
+}
+
+@media (max-width: 767px) {
+  .hero-title-overlay { max-width: 99vw; }
+  .about-mini-card .card { flex-direction: column; align-items: flex-start; }
+  
+}

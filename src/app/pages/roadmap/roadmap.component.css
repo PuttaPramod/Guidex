@@ -1,0 +1,63 @@
+.roadmap-journey-list-vertical {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px; /* space between vertical cards */
+  margin: auto;
+}
+
+.roadmap-step-card {
+  width: 100%;
+  max-width: 480px;
+  padding: 1.5rem 2rem;
+  cursor: default;
+}
+
+/* Remove horizontal arrow styles since vertical */
+
+.journey-arrow {
+  display: none !important;
+}
+
+/* Optional: adding subtle vertical line connecting steps */
+
+.roadmap-step-card:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  bottom: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 24px;
+  background-color: var(--bs-primary, #0d6efd);
+  border-radius: 2px;
+}
+
+/* Keep your icon and text styling from before */
+.journey-icon-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 1.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+}
+
+.journey-step-num {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.journey-step-desc {
+  color: #333;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  text-align: center;
+  min-height: 60px;
+}

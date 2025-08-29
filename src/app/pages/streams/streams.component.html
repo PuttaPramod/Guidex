@@ -1,0 +1,45 @@
+<div class="streams-bg py-5">
+  <div class="container">
+    <h2 class="text-center mb-5 text-primary fw-bold display-5">
+      Explore Streams After 10<sup>th</sup> Class<br><h1 class="text-center text-secondary fw-semibold">
+      select your stream for roadmap
+    </h1><br>
+    </h2>
+    <div class="row g-4 justify-content-center">
+      <div *ngFor="let s of streams" class="col-md-6 col-lg-4">
+        <a [routerLink]="['/roadmap', s.link]" class="text-decoration-none">
+          <div class="card shadow stream-card" [ngStyle]="{ 'border-top': '6px solid ' + s.color }">
+            <div class="card-body p-4 text-center">
+              <div class="icon-circle mb-3" [ngStyle]="{ 'background': s.color + '22' }">
+                <i class="bi {{ s.icon }}" [ngStyle]="{ color: s.color }"></i>
+              </div>
+              <h4 class="card-title fw-bold mb-2">{{ s.name }}</h4>
+              <p class="text-secondary mb-3">{{ s.description }}</p>
+              <div class="mb-2">
+                <strong>Core Subjects:</strong> {{ s.coreSubjects }}
+              </div>
+              <div class="mb-2">
+                <strong>Top Specializations:</strong>
+                <span *ngFor="let spec of s.specialization; let last = last">
+                  {{ spec }}<span *ngIf="!last">, </span>
+                </span>
+              </div>
+              <div class="mb-2">
+                <strong>Future Careers:</strong>
+                <span *ngFor="let career of s.careers; let last = last">
+                  {{ career }}<span *ngIf="!last">, </span>
+                </span>
+              </div>
+              <div>
+                <strong>Top Colleges:</strong>
+                <span *ngFor="let college of s.topColleges; let last = last">
+                  {{ college }}<span *ngIf="!last">, </span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

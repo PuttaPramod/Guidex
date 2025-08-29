@@ -1,0 +1,30 @@
+<ng-container *ngIf="selected; else notFound">
+  <div class="container py-5 roadmap-cards-journey-vertical">
+    <button class="btn btn-outline-secondary mb-4" (click)="router.navigate(['/streams'])">
+      ← Back to Streams
+    </button>
+    <h2 class="text-{{selected.color}} text-center mb-5 fw-bold">{{ selected.title }} Roadmap</h2>
+
+    <div class="roadmap-journey-list-vertical d-flex flex-column align-items-center gap-4">
+      <div 
+        class="roadmap-step-card journey-card shadow rounded-4 d-flex flex-column align-items-center position-relative animate-pop" 
+        *ngFor="let step of selected.steps; index as i"
+        [ngStyle]="{ 'background': cardBg(i), 'color': fontColor(i) }"
+      >
+        <div class="journey-icon-circle mb-2"
+             [ngStyle]="{'background': mainColor, 'color':'#fff'}">
+          <i class="bi" [ngClass]="stepIcon(i)"></i>
+        </div>
+        <div class="journey-step-num mb-1">Step {{ i + 1 }}</div>
+        <div class="fs-6 fw-semibold text-center journey-step-desc px-2">{{ step }}</div>
+      </div>
+    </div>
+  </div>
+</ng-container>
+
+<ng-template #notFound>
+  <div class="container text-center py-5">
+    <h3 class="text-danger mb-3">Roadmap not found</h3>
+    <a class="btn btn-primary" routerLink="/">Back to Streams</a>
+  </div>
+</ng-template>
