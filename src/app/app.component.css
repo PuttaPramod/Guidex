@@ -17,6 +17,10 @@
   letter-spacing: 0.5px;
 }
 
+a{
+  text-decoration: none;
+}
+
 .nav-link {
   color: #246191 !important;
   border-radius: 50px !important;
