@@ -1,6 +1,6 @@
 [build]
   command   = "npm run build"
-  publish   = "dist/future-guidelines/browser"
+  publish   = "dist/future-guidelines"
 
 [[plugins]]
   package = "@netlify/angular-runtime"
