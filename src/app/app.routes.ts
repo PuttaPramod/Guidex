@@ -8,6 +8,5 @@ export const routes: Routes = [
     { path:'',component: Home }, // Default route
     { path: 'home', component: Home },
   { path: 'quiz', component: Quiz },
-  { path: 'streams', component: Streams },
-  { path: 'roadmap/:link', component: RoadmapComponent } // Fallback for other roadmaps,
+  { path: 'streams', component: Streams }// Fallback for other roadmaps,
 ];
