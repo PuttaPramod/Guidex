@@ -14,9 +14,9 @@ import {
   setAngularAppManifest,
   withAppShell,
   withRoutes
-} from "./chunk-LNG4G5XJ.js";
-import "./chunk-4HPZ7XNK.js";
+} from "./chunk-YEJM2EPH.js";
 import "./chunk-UH33PYAJ.js";
+import "./chunk-4HPZ7XNK.js";
 import "./chunk-5WMO43EG.js";
 import "./chunk-XLILEEO4.js";
 import "./chunk-TXH25U4Z.js";
