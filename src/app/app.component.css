@@ -80,9 +80,10 @@ a{
 }
 
 .footer-brand h3 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   margin-bottom: 8px;
   color: #f59e0b;
+  font-weight: 900;
 }
 
 .footer-brand p {
@@ -93,6 +94,7 @@ a{
 .footer-nav,
 .footer-contact,
 .footer-social {
+  align-items: center;
   display: flex;
   flex-direction: column;
   gap: 12px;
