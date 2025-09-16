@@ -63,7 +63,7 @@ stepIcon(i: number): string {
     color: 'primary',
     steps: [
       'Complete 10th Class',
-      'Choose Science (PCM) in 11th and 12th',
+      'Choose Science (MPC) in 11th and 12th',
       'Prepare for Engineering Entrance Exams (e.g., JEE)',
       'Appear for 12th Board Exams',
       'Clear Engineering Entrance Exam',
@@ -91,7 +91,7 @@ stepIcon(i: number): string {
     color: 'success',
     steps: [
       'Complete 10th Class',
-      'Select Science (PCB) in 11th and 12th',
+      'Select Science (BiPC) in 11th and 12th',
       'Prepare for Medical Entrance Exams (e.g., NEET)',
       'Appear for 12th Board Exams',
       'Clear Medical Entrance Exam',

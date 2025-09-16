@@ -53,10 +53,14 @@
   margin-right: 12px;
 }
 
-.quiz-option:hover,
+.quiz-option:hover{
+  background: #caf0ee;
+  box-shadow: 0 4px 12px #9df2d111;
+  color: #170d36;
+}
+
 .quiz-option input[type="radio"]:checked + span {
-  border: 2px solid #00e093;
-  background: #e3faf9;
+  background: #e0f5f4;
   box-shadow: 0 4px 12px #9df2d111;
   color: #170d36;
 }
