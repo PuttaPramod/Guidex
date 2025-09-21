@@ -7,7 +7,7 @@
     </h2>
     <div class="row g-4 justify-content-center">
       <div *ngFor="let s of streams" class="col-md-6 col-lg-4">
-        <a [routerLink]="['/roadmap', s.link]" class="text-decoration-none">
+        <a title="{{s.name}} roadmap" [routerLink]="['/roadmap', s.link]" class="text-decoration-none">
           <div class="card shadow stream-card" [ngStyle]="{ 'border-top': '6px solid ' + s.color }">
             <div class="card-body p-4 text-center">
               <div class="icon-circle mb-3" [ngStyle]="{ 'background': s.color + '22' }">

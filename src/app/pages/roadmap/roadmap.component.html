@@ -1,6 +1,6 @@
 <ng-container *ngIf="selected; else notFound">
   <div class="container py-5 roadmap-cards-journey-vertical">
-    <button class="btn btn-outline-secondary mb-4" (click)="router.navigate(['/streams'])">
+    <button class="btn btn-outline-secondary mb-4" title="back to streams" (click)="router.navigate(['/streams'])">
       ← Back to Streams
     </button>
     <h2 class="text-{{selected.color}} text-center mb-5 fw-bold">{{ selected.title }} Roadmap</h2>

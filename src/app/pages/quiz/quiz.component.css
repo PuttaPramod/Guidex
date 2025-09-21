@@ -46,6 +46,13 @@
   transition: box-shadow 0.16s, border 0.16s;
 }
 
+.subtitle{
+  font-size: 1rem;
+  font-weight: 700;
+  background-color: #a8e8f322;
+  font-family:'Courier New', Courier, monospace;
+}
+
 .quiz-option input[type="radio"] {
   accent-color: #00e093; /* Supported in most modern browsers */
   width: 1.15em;
