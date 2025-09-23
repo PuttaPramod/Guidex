@@ -9,6 +9,7 @@ export const serverRoutes: ServerRoute[] = [
   { path: 'home', renderMode: RenderMode.Server },
   { path: 'quiz', renderMode: RenderMode.Server },
   { path: 'streams', renderMode: RenderMode.Server },
+  { path: 'after', renderMode: RenderMode.Server },
 
   // Dynamic route with SSR-only mode
   {

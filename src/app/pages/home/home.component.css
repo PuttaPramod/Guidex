@@ -100,13 +100,22 @@
   border: none;
   box-shadow: 0 3px 12px rgba(234,203,90,0.13);
 }
+.home-illustration img {
+  max-width: 500px;
+  width: 100%;
+  border-radius: 15px;
 
-.home-section {
-  max-width: 1200px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-  text-align: center;
+  /* Mixed background and border */
+  background: 
+    white;
+  padding: 10px; /* space for border effect */
+
+  /* To keep the image crisp */
+  display: block;
+  object-fit: cover;
 }
+
+
 
 .home-section-title {
   font-size: 2.5rem;
@@ -141,20 +150,7 @@
   align-items: center;
 }
 
-.home-illustration img {
-  max-width: 500px;
-  width: 100%;
-  border-radius: 15px;
 
-  /* Mixed background and border */
-  background: 
-    white;
-  padding: 10px; /* space for border effect */
-
-  /* To keep the image crisp */
-  display: block;
-  object-fit: cover;
-}
 
 
 .home-cards {

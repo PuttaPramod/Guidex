@@ -1,1 +1,121 @@
 /* You can add global styles to this file, and also import other style files */
+.home-section {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.home-section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  font-family:'Times New Roman', Times, serif;
+  letter-spacing: 1.3px;
+  text-transform:capitalize;
+  position: relative;
+}
+
+.home-section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140px;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  border-radius: 2px;
+}
+
+.iiit{
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.home-layout-container {
+  display: flex;
+  max-width: 120px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+
+.home-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  flex: 1;
+}
+
+.home-card {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  border-radius: 15px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.home-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(102, 126, 234, 0.4);
+  background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+}
+
+.home-card-icon {
+  font-size: 28px;
+  margin-right: 15px;
+  animation: home-sparkle 2s infinite;
+  flex-shrink: 0;
+}
+
+@keyframes home-sparkle {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.home-card-content {
+  flex: 1;
+}
+
+.home-card-content h3 {
+  margin: 0 0 0.3rem 0;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.home-card-content p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.home-card-arrow {
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 15px;
+  transition: transform 0.3s ease;
+}
+
+.home-card:hover .home-card-arrow {
+  transform: translateX(5px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .home-layout-container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .home-cards {
+    width: 100%;
+  }
+}
