@@ -119,3 +119,17 @@
     width: 100%;
   }
 }
+
+.mytitle{
+  font-family: 'Times New Roman', Times, serif !important;
+  letter-spacing: 1.3px;
+  text-transform:capitalize;
+}
+
+.mybutt{
+  font-family: 'Courier New', Courier, monospace !important;
+}
+
+.mysub{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

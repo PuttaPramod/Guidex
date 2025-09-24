@@ -1,7 +1,7 @@
 <div class="container py-5 d-flex justify-content-center align-items-center flex-column">
   <div class="quiz-banner mb-4 text-center">
     <img src="assets/banner.jpg" alt="Quiz" class="quiz-banner-img rounded-circle mx-auto d-block">
-    <h2 class="quiz-title mt-3 text-primary fw-bold">Smart Future Quiz!</h2>
+    <h2 class="quiz-title mt-3 text-primary fw-bold mytitle">Smart Future Quiz!</h2>
     <p class="text-warning subtitle" >Please select the appropriate options to receive the most suitable stream recommendation.</p>
     <div class="quiz-step text-white mt-2 mb-3 px-3 py-1 rounded-pill">
       Question {{ currentIndex + 1 }} of {{ questions.length }}
@@ -9,7 +9,7 @@
   </div>
 
   <div class="quiz-card card shadow rounded-5 p-4 mb-4 w-100" style="max-width:520px; background:rgba(255,255,255,0.95);">
-    <h4 class="card-title text-dark mb-3 fw-semibold">
+    <h4 class="card-title text-dark mb-3 fw-semibold mysub">
       <i class="bi bi-patch-question text-primary me-2"></i>{{ currentQuestion.text }}
     </h4>
 
@@ -26,7 +26,7 @@
         </label>
       </div>
 
-      <button type="submit"  class="btn btn-gradient mt-4 w-100 fw-bold">
+      <button type="submit"  class="btn btn-gradient mt-4 w-100 fw-bold mybutt">
   {{ currentIndex === questions.length - 1 ? 'Finish' : 'Next' }}
 </button>
 
@@ -36,9 +36,9 @@
   <h4 class="fw-bold text-success my-4">Quiz Completed!</h4>
   <p>Your recommended stream is:</p>
   <p id="result" class="fs-5">{{ quizResultMessage }}</p>
-  <button class="btn btn-outline-primary mt-3" (click)="resetQuiz()">Try Again</button><br>
+  <button class="btn btn-outline-primary mt-3 mybutt" (click)="resetQuiz()">Try Again</button><br>
     <button
-  class="btn btn-primary mt-3"
+  class="btn btn-primary mt-3 mybutt"
   (click)="viewRoadmap()">
   View My Roadmap
 </button>

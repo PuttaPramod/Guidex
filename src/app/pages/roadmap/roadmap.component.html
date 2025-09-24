@@ -3,7 +3,7 @@
     <button class="btn btn-outline-secondary mb-4" title="back to streams" (click)="router.navigate(['/streams'])">
       ← Back to Streams
     </button>
-    <h2 class="text-{{selected.color}} text-center mb-5 fw-bold">{{ selected.title }} Roadmap</h2>
+    <h2 class="text-{{selected.color}} text-center mb-5 fw-bold mytitle">{{ selected.title }} Roadmap</h2>
 
     <div class="roadmap-journey-list-vertical d-flex flex-column align-items-center gap-4">
       <div 
@@ -16,7 +16,7 @@
           <i class="bi" [ngClass]="stepIcon(i)"></i>
         </div>
         <div class="journey-step-num mb-1">Step {{ i + 1 }}</div>
-        <div class="fs-6 fw-semibold text-center journey-step-desc px-2">{{ step }}</div>
+        <div class="fs-6 fw-semibold text-center journey-step-desc px-2 mysub">{{ step }}</div>
       </div>
     </div>
   </div>

@@ -35,12 +35,12 @@
   font-size: 1.8rem;
   font-weight:bolder;
   text-shadow: 0 2px 14px #222c28aa;
-  color: #e50c0c;
+  color: #0c1ee5;
   font-weight: 700;
 }
 /* BUTTONS */
 .custom-btn {
-  width: 220px;
+  width: 270px;
   height: 50px;
   border-radius: 12px;
   transition: all 0.3s ease-in-out;
