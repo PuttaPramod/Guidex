@@ -14,23 +14,23 @@
               </div>
               <h4 class="card-title fw-bold mb-2 mysub">{{ s.name }}</h4>
               <p class="text-secondary mb-3">{{ s.description }}</p>
-              <div class="mb-2 mydes">
-                <strong>Core Subjects:</strong> {{ s.coreSubjects }}
-              </div>
               <div class="mb-2">
-                <strong>Top Specializations:</strong>
+                <strong class="mydes">Core Subjects:</strong> {{ s.coreSubjects }}
+              </div>
+              <div class="mb-2 mydes">
+                <strong class="mydes">Top Specializations:</strong>
                 <span *ngFor="let spec of s.specialization; let last = last">
                   {{ spec }}<span *ngIf="!last">, </span>
                 </span>
               </div>
               <div class="mb-2">
-                <strong>Future Careers:</strong>
+                <strong class="mydes">Future Careers:</strong>
                 <span *ngFor="let career of s.careers; let last = last">
                   {{ career }}<span *ngIf="!last">, </span>
                 </span>
               </div>
               <div>
-                <strong>Top Colleges:</strong>
+                <strong class="mydes">Top Colleges:</strong>
                 <span *ngFor="let college of s.topColleges; let last = last">
                   {{ college }}<span *ngIf="!last">, </span>
                 </span>
