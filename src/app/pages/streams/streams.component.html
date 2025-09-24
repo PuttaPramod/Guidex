@@ -17,7 +17,7 @@
               <div class="mb-2">
                 <strong class="mydes">Core Subjects:</strong> {{ s.coreSubjects }}
               </div>
-              <div class="mb-2 mydes">
+              <div class="mb-2">
                 <strong class="mydes">Top Specializations:</strong>
                 <span *ngFor="let spec of s.specialization; let last = last">
                   {{ spec }}<span *ngIf="!last">, </span>
