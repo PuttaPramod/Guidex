@@ -117,3 +117,70 @@
   50% { transform: scale(1.1); }
   100% { transform: scale(1); }
 }
+
+.iiit-section {
+  background: linear-gradient(135deg, #eef2f3 0%, #e6ebf5 100%);
+  font-family: "Poppins", sans-serif;
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #0062ff, #8a2be2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.feature-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  padding: 1.8rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.feature-title {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 0.75rem;
+}
+
+.feature-list {
+  list-style: none;
+  padding-left: 0;
+  color: #555;
+}
+
+.feature-list li {
+  padding-left: 5px;
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.explore-btn {
+  background: linear-gradient(90deg, #007bff, #6f42c1);
+  color: #fff;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.explore-btn:hover {
+  box-shadow: 0 0 15px rgba(102, 16, 242, 0.5);
+  transform: scale(1.05);
+}
