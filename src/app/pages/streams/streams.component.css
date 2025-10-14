@@ -1,72 +1,63 @@
+/* Background and spacing */
 .streams-bg {
   background: linear-gradient(120deg, #f6faff 0%, #eaf2fb 100%);
   min-height: 100vh;
 }
-/* roadmap.component.css */
-.step-card {
+
+/* Row flex container for equal-height cards */
+.row.g-4.equal-height {
   display: flex;
-  flex-direction: column;
-  background: #fff;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  flex-wrap: wrap;
 }
-.step-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-}
-.step-number {
-  width: 2.5rem; height: 2.5rem;
-  font-weight: bold;
-  border-radius: 50%;
+
+/* Column wrapper for each card */
+.cards {
   display: flex;
-  align-items: center;
+  margin-bottom: 1.5rem;
   justify-content: center;
-}
-.step-text {
-  font-size: 1rem;
-  line-height: 1.4;
-}
-/* streams.component.css remains as is */
-.icon-circle {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  display: flex;
   align-items: center;
-  justify-content: center;
-  margin: 0 auto 1rem auto;
-  font-size: 2.7rem;
-  box-shadow: 0 2px 12px rgba(30,60,120,0.09);
 }
-.card-title {
-  font-size: 1.38rem;
+
+/* Anchor tag fills column */
+.cards a {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  text-decoration: none;
 }
-@media (max-width: 767px) {
-  .streams-bg {
-    padding: 1rem 0;
-  }
-  .card-title {
-    font-size: 1.11rem;
-  }
-  .icon-circle {
-    width: 44px;
-    height: 44px;
-    font-size: 1.3rem;
-  }
-}
-.streams-bg {
-  background: linear-gradient(120deg, #f6faff 0%, #eaf2fb 100%);
-  min-height: 100vh;
-}
+
+/* Card styling with flex column */
 .stream-card {
   border-radius: 1.5rem;
   transition: transform 0.3s, box-shadow 0.3s;
   border: none;
   background: white;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 480px; /* Ensures equal height */
 }
+
+/* Card body distributes content vertically */
+.stream-card .card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1.5rem;
+}
+
+/* Pushes bottom section to bottom */
+.top-colleges {
+  margin-top: auto;
+}
+
+/* Hover effects */
 .stream-card:hover {
   transform: translateY(-10px) scale(1.05);
   box-shadow: 0 12px 32px rgba(50, 90, 190, 0.15);
 }
+
+/* Icon circle */
 .icon-circle {
   width: 64px;
   height: 64px;
@@ -77,8 +68,58 @@
   align-items: center;
   justify-content: center;
   box-shadow: 0 2px 12px rgba(30, 60, 120, 0.1);
+  flex-shrink: 0;
 }
 
-.mydes{
+/* Card title */
+.card-title {
+  font-size: 1.38rem;
+  flex-shrink: 0;
+}
+
+/* Monospace labels */
+.mydes {
   font-family: monospace;
+}
+
+/* Truncate long descriptions */
+.description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Show up to 3 lines */
+  -webkit-box-orient: vertical;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .streams-bg {
+    padding: 1rem 0;
+  }
+
+  .stream-card {
+    min-height: 420px;
+  }
+
+  .card-title {
+    font-size: 1.11rem;
+  }
+
+  .icon-circle {
+    width: 44px;
+    height: 44px;
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .stream-card {
+    min-height: 500px;
+  }
+}
+
+@media (min-width: 992px) {
+  .stream-card {
+    min-height: 480px;
+  }
 }

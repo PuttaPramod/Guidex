@@ -11,6 +11,5 @@ export const routes: Routes = [
   { path: 'quiz', component: Quiz },
   { path: 'streams', component: Streams },
   { path: 'after', component: After },
-
   { path: 'roadmap/:link', component:RoadmapComponent}// Fallback for other roadmaps,
 ];

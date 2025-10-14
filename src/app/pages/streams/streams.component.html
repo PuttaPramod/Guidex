@@ -5,7 +5,7 @@
       select your stream for roadmap
     </h1><br><br>
     <div class="row g-4 justify-content-center">
-      <div *ngFor="let s of streams" class="col-md-6 col-lg-4">
+      <div *ngFor="let s of streams" class="col-md-6 col-lg-4 cards">
         <a title="{{s.name}} roadmap" [routerLink]="['/roadmap', s.link]" class="text-decoration-none">
           <div class="card shadow stream-card" [ngStyle]="{ 'border-top': '6px solid ' + s.color }">
             <div class="card-body p-4 text-center">
