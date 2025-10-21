@@ -2,10 +2,11 @@ import { Component, Inject, PLATFORM_ID, signal } from '@angular/core';
 import { RouterOutlet,RouterModule, NavigationEnd, Router } from '@angular/router';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { filter } from 'rxjs';
+import { ChatbotComponent } from './components/chatbot/chatbot.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,CommonModule,RouterModule],
+  imports: [RouterOutlet,CommonModule,RouterModule,ChatbotComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

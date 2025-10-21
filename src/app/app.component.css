@@ -65,6 +65,13 @@ a{
   font-family: 'Poppins', sans-serif;
 }
 
+.chatbot{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1001;
+}
+
 .container {
   max-width: 1024px;
   margin: 0 auto;
