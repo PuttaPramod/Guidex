@@ -3,7 +3,7 @@ services:
     name: future-guidelines
     env: static
     buildCommand: ng build
-    staticPublishPath: dist/future-guidelines/browser/browser
+    staticPublishPath: dist/future-guidelines
     routes:
       - type: rewrite
         source: /*
