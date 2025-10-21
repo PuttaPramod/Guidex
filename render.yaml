@@ -1,9 +1,9 @@
 services:
   - type: web
-    name: guidex-frontend
+    name: future-guidelines
     env: static
-    buildCommand: npm run build
-    staticPublishPath: dist
+    buildCommand: ng build
+    staticPublishPath: dist/future-guidelines/browser/browser
     routes:
       - type: rewrite
         source: /*
