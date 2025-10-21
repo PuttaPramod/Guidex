@@ -26,7 +26,7 @@ export class ChatbotService {
 
   constructor(private http: HttpClient) {
     this.addBotMessage(
-      "Hello! 👋 I'm your AI Career Guidance Assistant powered by DeepSeek R1. I'm here to help you choose the right stream after 10th class. What would you like to know?",
+      "Hello! 👋 I'm your AI Career Guidance Assistant powered by Guidex. I'm here to help you choose the right stream after 10th class. What would you like to know?",
       ['Tell me about streams', 'How do I choose?', 'Career options']
     );
   }

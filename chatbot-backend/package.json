@@ -1,7 +1,7 @@
 {
   "name": "chatbot-backend",
   "version": "1.0.0",
-  "type": "module",
+  "type": "module", 
   "description": "Career Guidance Chatbot Backend with OpenRouter DeepSeek R1",
   "main": "server.js",
   "scripts": {

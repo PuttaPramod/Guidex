@@ -1,12 +1,16 @@
+// This file uses ES Module (import/export) syntax to match your package.json setting: "type": "module".
+
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import { queryDeepSeekR1 } from './openrouterClient.js';
+// NOTE: Adjust the path below if your openrouterClient.js file is in a different location 
+import { queryDeepSeekR1 } from './openrouterClient.js'; 
 
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+// Keep PORT for local development only
+const PORT = process.env.PORT || 3001; 
 
 // Middleware
 app.use(cors({
@@ -15,7 +19,7 @@ app.use(cors({
 }));
 app.use(express.json());
 
-// Store conversation history per session (in production, use Redis or database)
+// Store conversation history per session (WARNING: Will reset frequently on Vercel)
 const conversationHistories = new Map();
 
 // Chat endpoint
@@ -33,6 +37,8 @@ app.post('/api/chat', async (req, res) => {
     if (!conversationHistories.has(sessionId)) {
       conversationHistories.set(sessionId, []);
     }
+    
+    // 🛑 FIX APPLIED HERE: Changed 'conversationHistations' to 'conversationHistories' 🛑
     const history = conversationHistories.get(sessionId);
 
     // Call OpenRouter DeepSeek R1
@@ -72,7 +78,6 @@ app.post('/api/chat', async (req, res) => {
 // Generate smart suggestions based on context
 function generateSuggestions(aiReply, userMessage) {
   const lowerReply = aiReply.toLowerCase();
-  const lowerMessage = userMessage.toLowerCase();
 
   // Stream-specific suggestions
   if (lowerReply.includes('science')) {
@@ -109,7 +114,13 @@ app.get('/api/health', (req, res) => {
   });
 });
 
-app.listen(PORT, () => {
-  console.log(`🚀 Server running on http://localhost:${PORT}`);
-  console.log(`📊 Using DeepSeek R1 via OpenRouter`);
-});
+// 🌟 VERCEL EXPORT: Must use 'export default' in ESM 🌟
+export default app; 
+
+// Local development server listener (ignored by Vercel)
+if (process.env.NODE_ENV !== 'production' && !process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`🚀 Server running on http://localhost:${PORT}`);
+    console.log(`📊 Using DeepSeek R1 via OpenRouter`);
+  });
+}

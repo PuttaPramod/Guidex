@@ -1,5 +1,26 @@
 {
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist/future-guidelines/browser/browser"
+      }
+    },
+    {
+      "src": "chatbot-backend/server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/chatbot-backend/server.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "dist/future-guidelines/browser/index.html"
+    }
   ]
 }
