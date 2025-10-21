@@ -28,7 +28,7 @@ When the user asks "What streams are available after 10th?" or similar, always g
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${process.env.OPENROUTER_API_KEY}`,
-        'HTTP-Referer': 'http://localhost:4200', // Your site URL
+        'HTTP-Referer': ["http://localhost:4200","pkfor10th.vercel.app"], // Your site URL
         'X-Title': 'Career Guidance Chatbot' // Your app name
       },
       body: JSON.stringify({
