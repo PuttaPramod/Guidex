@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 3001;
 
 // Middleware
 app.use(cors({
-  origin: 'http://localhost:4200',
+  origin: ["http://localhost:4200","pkfor10th.vercel.app"], // Your frontend URL
   credentials: true
 }));
 app.use(express.json());
