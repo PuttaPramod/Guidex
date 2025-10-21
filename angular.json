@@ -16,6 +16,9 @@
             "polyfills": [
               "src/polyfills.ts"
             ],
+            "allowedCommonJsDependencies": [
+      "aos"
+    ],
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "outputPath": "dist/future-guidelines/browser",
